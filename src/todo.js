@@ -38,8 +38,8 @@ function painttodo(newtodo) {
     button.innerText = "❌";
     span.innerText = newtodo.text;
     li.id = newtodo.id; //li tag id 속성에 id값 지정
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
     todolist.appendChild(li);
 }
 

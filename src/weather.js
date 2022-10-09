@@ -19,10 +19,10 @@ function onGeoOK(position) {
             loc.innerText = data.name; //지역
             //weather_main.innerText = data.weather[0].main; //현재날씨
             weather_icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`; //날씨 아이콘
-            temp.innerText = `${data.main.temp} ℃`; //현재기온
-            temp_max.innerText = `최고 : ${data.main.temp_max} ℃`; //최고기온
-            temp_min.innerText = `최저 : ${data.main.temp_min} ℃`; //최저기온
-            humidity.innerText = `습도 : ${data.main.humidity} %`; //습도
+            temp.innerText = `${Math.floor(data.main.temp)} ℃`; //현재기온
+            temp_max.innerText = `최고 : ${Math.floor(data.main.temp_max)} ℃`; //최고기온
+            temp_min.innerText = `최저 : ${Math.floor(data.main.temp_min)} ℃`; //최저기온
+            humidity.innerText = `습도 : ${Math.floor(data.main.humidity)} %`; //습도
         });
 }
 
